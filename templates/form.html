@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oil Plant Inspection Assistant</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Hero Image -->
+  <div class="relative">
+    <img src="{{ url_for('static', filename='images/image.png') }}" alt="Oil Plant" class="w-full h-72 object-cover">
+    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+      <h1 class="text-3xl md:text-4xl font-bold text-white text-center">
+        Oil Plant Inspection Assistant
+        <div class="text-sm font-normal">Safety • Reliability • Environmental Compliance</div>
+      </h1>
+    </div>
+  </div>
+
+  <!-- Two Column Layout -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+
+    <!-- LEFT SECTION: Company & Inspection Info -->
+    <div class="space-y-6">
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-bold text-blue-800 mb-2">About the Company</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Gemini Energy is a leader in sustainable oil & gas operations, committed to ensuring safe,
+          reliable, and environmentally responsible energy production. With decades of experience, our
+          facilities set the benchmark in operational excellence.
+        </p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-bold text-blue-800 mb-2">About this Inspection</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Oil & gas facilities require regular inspections to ensure equipment reliability, protect personnel,
+          and minimize environmental impact. This form helps capture field observations, which will generate an
+          <strong>Executive Summary</strong>, a prioritized <strong>Risk Assessment</strong>, and a detailed
+          <strong>Corrective Action Plan</strong>.
+        </p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-bold text-blue-800 mb-2">Contact</h2>
+        <p class="text-gray-700">
+          📍 123 Industrial Zone, Antartica <br>
+          📞 +1 (123) 123-1234 <br>
+          📧 inspections@geminienergy.com
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT SECTION: Inspection Form -->
+    <div class="bg-white shadow-md rounded-lg p-8">
+      <h2 class="text-xl font-bold text-blue-800 mb-4">Inspection Form</h2>
+      <form action="/generate" method="POST" class="space-y-4">
+
+        <label class="block">
+          <span class="font-semibold">Site Name:</span>
+          <input type="text" name="site" placeholder="e.g., Gemini Oil Plant" class="mt-1 block w-full border p-2 rounded" required>
+        </label>
+
+        <label class="block">
+          <span class="font-semibold">Inspector Name:</span>
+          <input type="text" name="inspector" placeholder="e.g., Jane Smith" class="mt-1 block w-full border p-2 rounded" required>
+        </label>
+
+        <label class="block">
+          <span class="font-semibold">Date:</span>
+          <input type="date" name="date" class="mt-1 block w-full border p-2 rounded" required>
+        </label>
+
+        <label class="block">
+          <span class="font-semibold">Equipment Condition:</span>
+          <textarea name="equipment" class="mt-1 block w-full border p-2 rounded" rows="3" required></textarea>
+        </label>
+
+        <label class="block">
+          <span class="font-semibold">Safety Observations:</span>
+          <textarea name="safety" class="mt-1 block w-full border p-2 rounded" rows="3" required></textarea>
+        </label>
+
+        <label class="block">
+          <span class="font-semibold">Environmental Observations:</span>
+          <textarea name="environment" class="mt-1 block w-full border p-2 rounded" rows="3" required></textarea>
+        </label>
+
+        <label class="block">
+          <span class="font-semibold">Additional Notes:</span>
+          <textarea name="notes" class="mt-1 block w-full border p-2 rounded" rows="3"></textarea>
+        </label>
+
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">
+          Generate Report
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>

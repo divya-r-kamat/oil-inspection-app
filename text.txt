@@ -1,0 +1,18 @@
+Equipment Condition:
+Pump #3 showing minor vibration beyond threshold, lubrication required.
+Heat exchanger tubes clean, no visible scaling or corrosion.
+
+Safety Observations:
+One worker observed without helmet near compressor unit.
+Fire extinguisher in Control Room overdue for inspection (last checked Jan 2024).
+Safety signage near storage tanks partially faded, needs replacement.
+
+Environmental Observations:
+No oil spillage detected around storage area.
+Minor gas odor near Flare Stack A, requires leak check.
+Wastewater treatment unit functioning as expected, pH within limits.
+
+Additional Notes:
+Night shift staff reported noise above normal levels in Pump House B.
+Weather conditions: high humidity, may affect cooling efficiency.
+Recommended to schedule preventive maintenance within 2 weeks.

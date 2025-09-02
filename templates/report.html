@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inspection Report</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8 mt-8">
+    <h1 class="text-3xl font-bold mb-6 text-center">Generated Inspection Report</h1>
+    <div class="prose max-w-none">
+      {{ report|safe }}
+    </div>
+    <div class="mt-6 text-center">
+      <a href="/" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800">Back to Form</a>
+    </div>
+  </div>
+</body>
+</html>
