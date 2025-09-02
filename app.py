@@ -8,7 +8,6 @@ load_dotenv()  # 👈 this loads .env into environment
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
-# ✅ Initialize Gemini client correctly
 API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
     raise ValueError("⚠️ GEMINI_API_KEY environment variable not set!")
@@ -68,18 +67,15 @@ def generate():
     {inspection_text}
     """
 
-    # ✅ Call Gemini correctly
     response = client.models.generate_content(
     model="gemini-2.5-flash",
     contents=prompt
     )
-    # response = genai.GenerativeModel("gemini-2.5-flash").generate_content(prompt)
 
-    # Extract the text output
     report_html = response.text
 
     return render_template("report.html", report=report_html)
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
